@@ -30,13 +30,13 @@ public class Index {
     }
 
     public static void makeIndex(FileUploaded fileUploaded) {
-        /** Example 1:  new item 
+        /** Example 1:  new item  */
         Index index = new Index();
         repository().save(index);
 
         Indexed indexed = new Indexed(index);
         indexed.publishAfterCommit();
-        */
+       
 
         /** Example 2:  finding and process
         
