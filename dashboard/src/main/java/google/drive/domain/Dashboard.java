@@ -16,6 +16,6 @@ public class Dashboard {
 
     private String fileName;
     private String videoUrl;
-    private String isIndexed;
+    private Boolean isIndexed;
     private String customerId;
 }
