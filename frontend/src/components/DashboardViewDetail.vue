@@ -13,7 +13,7 @@
                 <String label="VideoUrl" v-model="item.videoUrl" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="IsIndexed" v-model="item.isIndexed" :editMode="editMode" @change="change" />
+                <Boolean label="IsIndexed" v-model="item.isIndexed" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
