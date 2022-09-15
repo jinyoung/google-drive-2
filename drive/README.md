@@ -10,7 +10,7 @@ mvn spring-boot:run
 
 ```
 mvn package -B -DskipTests
-docker build -t username/drive:v1 .
+docker build -t jinyoung/drive:v1 .
 docker run username/drive:v1
 ```
 
