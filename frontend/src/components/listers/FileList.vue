@@ -10,10 +10,14 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Size :  {{data.size }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -95,6 +99,8 @@
             this.values = temp.data._embedded.files;
             
             this.newValue = {
+                'name': '',
+                'size': 0,
             }
         },
         methods: {
