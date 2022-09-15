@@ -37,7 +37,7 @@ public class PolicyHandler {
 
         // REST Request Sample
 
-        // fileService.getFile(/** mapping value needed */);
+        //fileService.getFile(/** mapping value needed */);
 
         // Sample Logic //
         Notification.notifyToUser(event);
@@ -60,7 +60,7 @@ public class PolicyHandler {
         // fileService.getFile(/** mapping value needed */);
 
         // Sample Logic //
-        Notification.notifyToUser(event);
+        Notification.notifyToUser(event, fileService);
     }
     // keep
 

@@ -1,6 +1,9 @@
 package google.drive.domain;
 
 import google.drive.NotificationApplication;
+import google.drive.external.File;
+import google.drive.external.FileService;
+
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
@@ -28,10 +31,13 @@ public class Notification {
 
     public static void notifyToUser(Indexed indexed) {
         /** Example 1:  new item 
+        */
         Notification notification = new Notification();
+        notification.setUserId(indexed.getUserId());
+        notification.setMessage("인덱싱되었습니다: "+ indexed.getFileId());
+
         repository().save(notification);
 
-        */
 
         /** Example 2:  finding and process
         
@@ -46,12 +52,18 @@ public class Notification {
 
     }
 
-    public static void notifyToUser(VideoProcessed videoProcessed) {
-        /** Example 1:  new item 
+    public static void notifyToUser(VideoProcessed videoProcessed, FileService fileService) {
+        /** Example 1:  new item   */
         Notification notification = new Notification();
+
+        File file = fileService.getFile(videoProcessed.getFileKey());
+
+        notification.setUserId(file.getUserId());
+        notification.setMessage("비디오 처리가 완려되었습니다: "+videoProcessed.getVideoUrl());
+        
         repository().save(notification);
 
-        */
+      
 
         /** Example 2:  finding and process
         

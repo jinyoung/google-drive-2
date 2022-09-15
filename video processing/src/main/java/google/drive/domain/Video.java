@@ -34,13 +34,15 @@ public class Video {
     }
 
     public static void processVideo(FileUploaded fileUploaded) {
-        /** Example 1:  new item 
+        /** Example 1:  new item  */
         Video video = new Video();
+        video.setFileKey(fileUploaded.getId());
+        video.setVideoUrl("https://youtube.com/"+ fileUploaded.getName().replaceAll(" ", "-"));
         repository().save(video);
 
-        VideoProcessed videoProcessed = new VideoProcessed(video);
-        videoProcessed.publishAfterCommit();
-        */
+        // VideoProcessed videoProcessed = new VideoProcessed(video);
+        // videoProcessed.publishAfterCommit();
+       
 
         /** Example 2:  finding and process
         
