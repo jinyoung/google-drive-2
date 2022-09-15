@@ -10,6 +10,8 @@ import lombok.*;
 public class VideoProcessed extends AbstractEvent {
 
     private Long id;
+    private String videoUrl;
+    private Long fileKey;
 
     public VideoProcessed(Video aggregate) {
         super(aggregate);

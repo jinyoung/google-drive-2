@@ -21,6 +21,8 @@ public class Index {
 
     private String fileId;
 
+    private String userId;
+
     @PostPersist
     public void onPostPersist() {
         Indexed indexed = new Indexed(this);

@@ -20,6 +20,10 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/videos/**, 
+        - id: notification
+          uri: http://localhost:8084
+          predicates:
+            - Path=/notifications/**, 
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -55,6 +59,10 @@ spring:
           uri: http://videoProcessing:8080
           predicates:
             - Path=/videos/**, 
+        - id: notification
+          uri: http://notification:8080
+          predicates:
+            - Path=/notifications/**, 
         - id: frontend
           uri: http://frontend:8080
           predicates:

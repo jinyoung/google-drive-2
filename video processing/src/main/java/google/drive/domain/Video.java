@@ -16,6 +16,10 @@ public class Video {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String videoUrl;
+
+    private Long fileKey;
+
     @PostPersist
     public void onPostPersist() {
         VideoProcessed videoProcessed = new VideoProcessed(this);

@@ -9,6 +9,9 @@
             <div>
                 <String label="FileId" v-model="item.fileId" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

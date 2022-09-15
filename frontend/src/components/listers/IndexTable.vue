@@ -69,6 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "keywords", value: "keywords" },
                     { text: "fileId", value: "fileId" },
+                    { text: "userId", value: "userId" },
                 ],
             index : [],
             newValue: {},
@@ -88,6 +89,7 @@
             this.newValue = {
                 'keywords': [],
                 'fileId': '',
+                'userId': '',
             }
         },
         methods: {
