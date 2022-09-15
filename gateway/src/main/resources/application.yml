@@ -24,6 +24,10 @@ spring:
           uri: http://localhost:8084
           predicates:
             - Path=/notifications/**, 
+        - id: dashboard
+          uri: http://localhost:8085
+          predicates:
+            - Path=, /dashboards/**
         - id: frontend
           uri: http://localhost:8080
           predicates:
@@ -63,6 +67,10 @@ spring:
           uri: http://notification:8080
           predicates:
             - Path=/notifications/**, 
+        - id: dashboard
+          uri: http://dashboard:8080
+          predicates:
+            - Path=, /dashboards/**
         - id: frontend
           uri: http://frontend:8080
           predicates:
