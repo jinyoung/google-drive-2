@@ -70,6 +70,7 @@
             me.newValue = {
                 'name': '',
                 'size': 0,
+                'userId': '',
             }
         },
         methods:{

@@ -10,10 +10,14 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ VideoUrl :  {{data.videoUrl }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ FileKey :  {{data.fileKey }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -95,6 +99,8 @@
             this.values = temp.data._embedded.videos;
             
             this.newValue = {
+                'videoUrl': '',
+                'fileKey': 0,
             }
         },
         methods: {

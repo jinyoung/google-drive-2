@@ -19,6 +19,7 @@
         <v-card-text>
             <String label="Keywords" v-model="value.keywords" :editMode="editMode"/>
             <String label="FileId" v-model="value.fileId" :editMode="editMode"/>
+            <String label="UserId" v-model="value.userId" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>

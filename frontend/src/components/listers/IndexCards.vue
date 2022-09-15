@@ -70,6 +70,7 @@
             me.newValue = {
                 'keywords': [],
                 'fileId': '',
+                'userId': '',
             }
         },
         methods:{

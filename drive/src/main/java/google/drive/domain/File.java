@@ -20,6 +20,8 @@ public class File {
 
     private Long size;
 
+    private String userId;
+
     @PostPersist
     public void onPostPersist() {
         FileUploaded fileUploaded = new FileUploaded(this);

@@ -12,6 +12,7 @@ public class Indexed extends AbstractEvent {
     private Long id;
     private List<String> keywords;
     private String fileId;
+    private String userId;
 
     public Indexed(Index aggregate) {
         super(aggregate);
