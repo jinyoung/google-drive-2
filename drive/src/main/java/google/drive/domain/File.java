@@ -16,6 +16,10 @@ public class File {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String name;
+
+    private Long size;
+
     @PostPersist
     public void onPostPersist() {
         FileUploaded fileUploaded = new FileUploaded(this);

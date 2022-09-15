@@ -10,6 +10,8 @@ import lombok.*;
 public class Indexed extends AbstractEvent {
 
     private Long id;
+    private List<String> keywords;
+    private String fileId;
 
     public Indexed(Index aggregate) {
         super(aggregate);
