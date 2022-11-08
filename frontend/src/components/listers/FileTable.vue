@@ -68,8 +68,8 @@
                 [
                     { text: "id", value: "id" },
                     { text: "name", value: "name" },
+                    { text: "type", value: "type" },
                     { text: "size", value: "size" },
-                    { text: "userId", value: "userId" },
                 ],
             file : [],
             newValue: {},
@@ -88,8 +88,8 @@
 
             this.newValue = {
                 'name': '',
+                'type': '',
                 'size': 0,
-                'userId': '',
             }
         },
         methods: {

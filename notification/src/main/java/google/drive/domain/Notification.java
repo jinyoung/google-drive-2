@@ -1,32 +1,47 @@
 package google.drive.domain;
 
+import google.drive.domain.UserNotified;
 import google.drive.NotificationApplication;
-import java.util.Date;
-import java.util.List;
 import javax.persistence.*;
+import java.util.List;
 import lombok.Data;
+import java.util.Date;
 
 @Entity
-@Table(name = "Notification_table")
+@Table(name="Notification_table")
 @Data
-public class Notification {
 
+public class Notification  {
+
+    
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    
+    
+    
+    
+    
     private Long id;
 
-    private String userId;
+    @PostPersist
+    public void onPostPersist(){
 
-    private String message;
 
-    public static NotificationRepository repository() {
-        NotificationRepository notificationRepository = NotificationApplication.applicationContext.getBean(
-            NotificationRepository.class
-        );
+        UserNotified userNotified = new UserNotified(this);
+        userNotified.publishAfterCommit();
+
+    }
+
+    public static NotificationRepository repository(){
+        NotificationRepository notificationRepository = NotificationApplication.applicationContext.getBean(NotificationRepository.class);
         return notificationRepository;
     }
 
-    public static void notifyToUser(Indexed indexed) {
+
+
+
+    public static void sendNotification(FileUploaded fileUploaded){
+
         /** Example 1:  new item 
         Notification notification = new Notification();
         repository().save(notification);
@@ -35,7 +50,7 @@ public class Notification {
 
         /** Example 2:  finding and process
         
-        repository().findById(indexed.get???()).ifPresent(notification->{
+        repository().findById(fileUploaded.get???()).ifPresent(notification->{
             
             notification // do something
             repository().save(notification);
@@ -44,9 +59,10 @@ public class Notification {
          });
         */
 
+        
     }
+    public static void sendNotification(VideoProcessed videoProcessed){
 
-    public static void notifyToUser(VideoProcessed videoProcessed) {
         /** Example 1:  new item 
         Notification notification = new Notification();
         repository().save(notification);
@@ -64,5 +80,8 @@ public class Notification {
          });
         */
 
+        
     }
+
+
 }

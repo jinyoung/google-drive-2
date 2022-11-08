@@ -68,9 +68,6 @@
             me.values = temp.data._embedded.indices;
             
             me.newValue = {
-                'keywords': [],
-                'fileId': '',
-                'userId': '',
             }
         },
         methods:{

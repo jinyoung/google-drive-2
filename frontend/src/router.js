@@ -5,6 +5,7 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
+
 import FileManager from "./components/listers/FileCards"
 import FileDetail from "./components/listers/FileDetail"
 
@@ -18,13 +19,11 @@ import NotificationManager from "./components/listers/NotificationCards"
 import NotificationDetail from "./components/listers/NotificationDetail"
 
 
-import DashboardView from "./components/DashboardView"
-import DashboardViewDetail from "./components/DashboardViewDetail"
-
 export default new Router({
     // mode: 'history',
     base: process.env.BASE_URL,
     routes: [
+
             {
                 path: '/files',
                 name: 'FileManager',
@@ -69,17 +68,6 @@ export default new Router({
                 component: NotificationDetail
             },
 
-
-            {
-                path: '/dashboards',
-                name: 'DashboardView',
-                component: DashboardView
-            },
-            {
-                path: '/dashboards/:id',
-                name: 'DashboardViewDetail',
-                component: DashboardViewDetail
-            },
 
 
     ]

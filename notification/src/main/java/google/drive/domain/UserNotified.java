@@ -7,14 +7,14 @@ import lombok.*;
 
 @Data
 @ToString
-public class VideoProcessed extends AbstractEvent {
+public class UserNotified extends AbstractEvent {
 
     private Long id;
 
-    public VideoProcessed(Video aggregate){
+    public UserNotified(Notification aggregate){
         super(aggregate);
     }
-    public VideoProcessed(){
+    public UserNotified(){
         super();
     }
 }

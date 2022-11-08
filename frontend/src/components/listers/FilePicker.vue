@@ -18,10 +18,10 @@
                                 Name :  {{item.name }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Size :  {{item.size }}
+                                Type :  {{item.type }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                UserId :  {{item.userId }}
+                                Size :  {{item.size }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

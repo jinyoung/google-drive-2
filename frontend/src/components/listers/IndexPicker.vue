@@ -14,15 +14,6 @@
                         <v-list-item-content>
                             <v-list-item-title>
                             </v-list-item-title>
-                            <v-list-item-subtitle>
-                                Keywords :  {{item.keywords }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                FileId :  {{item.fileId }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
-                                UserId :  {{item.userId }}
-                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -74,12 +65,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
-                    
-                    
-                    
-                    
-                    
                     
                     this.$emit('selected', obj);
                 }

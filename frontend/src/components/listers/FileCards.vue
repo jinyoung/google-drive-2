@@ -69,8 +69,8 @@
             
             me.newValue = {
                 'name': '',
+                'type': '',
                 'size': 0,
-                'userId': '',
             }
         },
         methods:{

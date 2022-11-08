@@ -1,12 +1,5 @@
 server:
   port: 8080
-feign:
-  hystrix:
-    enabled: true
-hystrix:
-  command:
-    default:
-      execution.isolation.thread.timeoutInMilliseconds: 500
 spring:
   application:
     name: notification
@@ -46,12 +39,9 @@ logging:
     org.hibernate.type: trace
     org.springframework.cloud: debug
 
-api:
-  url:
-    drive: localhost:8081
 
 server:
-  port: 8084
+  port: 8085
 
 ---
 
@@ -79,7 +69,4 @@ spring:
           destination: google.drive
           contentType: application/json
 
-api:
-  url:
-    drive: drive:8080
 
